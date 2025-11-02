@@ -11,7 +11,7 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-hero opacity-10" />
       <div className="container mx-auto px-4 py-20 relative z-10">
-      <img id="site-logo" src="./public/logo.png" alt="Food MED logo" />
+      {/* <img id="site-logo" src="./public/logo.png" alt="Food MED logo" /> */}
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
