@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 
 // Small slideshow image set (external images so we don't need extra local files)
 const imageSources = [
@@ -15,6 +15,7 @@ interface HeroProps {
 
 export const Hero = ({ onGetStarted }: HeroProps) => {
   const [index, setIndex] = useState(0);
+  const [rating, setRating] = useState(0);
 
   useEffect(() => {
     const id = setInterval(
@@ -42,7 +43,7 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
               could harm you based on your medical conditions, religion, and
               lifestyle.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center">
               <Button
                 size="lg"
                 onClick={onGetStarted}
@@ -50,13 +51,47 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
               >
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8"
-              >
-                Donate
-              </Button>
+
+              {/* Rating control (replaces Donate button) */}
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => {
+                    const starIndex = i + 1;
+                    return (
+                      <button
+                        key={starIndex}
+                        type="button"
+                        aria-label={`Rate ${starIndex} star${
+                          starIndex > 1 ? "s" : ""
+                        }`}
+                        onClick={() => setRating(starIndex)}
+                        className={`transition-colors focus:outline-none ${
+                          rating >= starIndex
+                            ? "text-amber-400"
+                            : "text-muted-foreground hover:text-amber-300"
+                        }`}
+                      >
+                        {rating >= starIndex ? (
+                          // Filled star (solid) using inline SVG so we can use fill-current
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            className="h-6 w-6 fill-current"
+                            aria-hidden="true"
+                          >
+                            <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.402 8.166L12 18.897l-7.336 3.866 1.402-8.166L.132 9.21l8.2-1.192L12 .587z" />
+                          </svg>
+                        ) : (
+                          <Star className="h-6 w-6" />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {rating > 0 ? `Thanks for rating ${rating}/5` : "Rate us"}
+                </div>
+              </div>
             </div>
           </div>
           <div className="relative animate-fade-in-delay">
