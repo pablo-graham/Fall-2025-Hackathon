@@ -11,15 +11,21 @@ Live site: https://<your-vercel-domain>
 - Review results: detected foods, warnings, and clear “remove/add” recommendations.
 
 ## How it works (seconds)
-1. ![](/food_harmony_main/public/image.png) Quick survey — capture allergies, medications, diet/religion, and work/health context (10–20s).
+![](/food_harmony_main/public/image.png)
+1. Quick survey — capture allergies, medications, diet/religion, and work/health context (10–20s).
+   ![](/food_harmony_main/public/image-1.png)
 
-2. ![](/food_harmony_main/public/image-1.png) Add a meal — upload a photo or paste/type ingredients (5–10s).
+2. Add a meal — upload a photo or paste/type ingredients (5–10s).
+   ![](/food_harmony_main/public/image-2.png)
 
-3. ![](/food_harmony_main/public/image-2.png) Automatic detection — vision + OCR parse the photo/text into a structured ingredient list (1–3s).
+3. Automatic detection — vision + OCR parse the photo/text into a structured ingredient list (1–3s).
+   
 
-4. ![](/food_harmony_main/public/image-3.png) Rule checks — run allergen, drug–food, disease heuristics, and faith-based restriction rules; surface flags and edit suggestions (1–2s).
+4. Rule checks — run allergen, drug–food, disease heuristics, and faith-based restriction rules; surface flags and edit suggestions (1–2s).
 
-5. ![](/food_harmony_main/public/image-4.png) Balance & tips — simple protein/fiber/fat/sodium score, hydration guidance, and clear “remove/add” recommendations (≈1s).
+5. Balance & tips — simple protein/fiber/fat/sodium score, hydration guidance, and clear “remove/add” recommendations (≈1s).
+   ![](/food_harmony_main/public/image-3.png)
+   ![](/food_harmony_main/public/image-4.png) 
 
 Results include confidence scores, quick edit to ingredients, and compact actionable guidance.
 
