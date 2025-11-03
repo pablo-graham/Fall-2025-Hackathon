@@ -2,9 +2,6 @@
 
 Quick check before you eat. Upload a meal photo or list ingredients and get instant flags for risky combinations, allergens, medication/medical conflicts, faith-based restrictions, and basic meal balance. Wellness tool only — not medical advice.
 
-## Try it
-Live site: https://<your-vercel-domain>
-
 ## Quick Start
 - Open the site and complete the short survey (medical conditions, diet/religion, working environment).
 - Add a meal: upload a photo or type ingredients.
