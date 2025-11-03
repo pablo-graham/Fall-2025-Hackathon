@@ -52,7 +52,9 @@ Open an issue or submit a PR. Keep changes focused and add tests for new rules o
 
 ## Feedback / Contact
 Found an issue or want a feature? Open an issue or email: 
+
 thunhantruong0810@gmail.com
+
 pablohruiz.327@gmail.com
 
 ## License
